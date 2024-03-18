@@ -1,0 +1,8 @@
+.idea
+node_modules
+var
+vendor
+.env
+.env.local
+.env.test
+exports/user.sql

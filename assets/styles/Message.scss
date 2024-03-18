@@ -1,0 +1,59 @@
+.Message
+{
+  padding: $padding-big;
+  border-radius: $radius-base;
+  color: #A1A1A1;
+  border-left: 8px solid currentColor;
+  background-color: #EDEDED;
+  margin-bottom: $margin-big;
+
+  &::before
+  {
+    content: '\02B25';
+    padding-right: $padding-base;
+  }
+
+  &.-success
+  {
+    background-color: #C3F3D7;
+    color: #24AD5D;
+
+    &::before
+    {
+      content: '\02714';
+    }
+  }
+
+  &.-notice
+  {
+    background-color: #D7F0FF;
+    color: #3FB6FF;
+
+    &::before
+    {
+      content: '\1F6C8';
+    }
+  }
+
+  &.-error
+  {
+    background-color: #FFE0E3;
+    color: #FF4A5A;
+
+    &::before
+    {
+      content: '\02718';
+    }
+  }
+
+  &.-warning
+  {
+    background-color: #FFD89B;
+    color: #CE8501;
+
+    &::before
+    {
+      content: '\026A0';
+    }
+  }
+}

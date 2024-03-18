@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Product All{% endblock %}
+
+{% block body %}
+    <h1 class="MainContent_title">Liste de tous les produits</h1>
+
+    {% for product in products %}
+
+        {% if loop.first %}
+            {% if number_of_results is defined %}
+             <p>{{ number_of_results }} résultats</p>
+            {% endif %}
+            <div class="CardCollection">
+        {% endif %}
+
+        {% include 'product/_product_card.html.twig' %}
+
+        {% if loop.last %}
+            </div>
+        {% endif %}
+
+    {% else %}
+
+        <p>Il n'y a aucun produit</p>
+
+    {% endfor %}
+
+{% endblock %}

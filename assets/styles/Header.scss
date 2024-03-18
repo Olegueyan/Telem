@@ -1,0 +1,20 @@
+.Header
+{
+  height: 100px;
+  background-color: $header-bg-color;
+  padding: $header-padding;
+
+  display: flex;
+  align-items: center;
+
+  &_brand
+  {
+    flex-basis: $header-brand-width;
+    box-sizing: border-box;
+  }
+
+  &_banner
+  {
+    flex-grow: 1;
+  }
+}

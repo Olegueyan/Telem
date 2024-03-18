@@ -1,0 +1,80 @@
+.Button
+{
+  display: inline-block;
+  background-color: $button-default-reverse-color;
+  text-decoration: none;
+  color: $button-default-color;
+  border: solid 2px $button-default-color;
+  border-radius: $radius-base;
+  padding: $padding-big;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin-bottom: $margin-base;
+
+  &::before
+  {
+    padding-right: $padding-big;
+  }
+
+  &.-reverse
+  {
+    background-color: $button-default-color;
+    color: $button-default-reverse-color;
+  }
+
+  &.-link
+  {
+    background-color: $button-link-reverse-color;
+    color: $button-link-color;
+    border-color: $button-link-color;
+
+    &::before
+    {
+      content: '\021E8';
+    }
+
+    &.-reverse
+    {
+      background-color: $button-link-color;
+      color: $button-link-reverse-color;
+    }
+  }
+
+  &.-no-danger
+  {
+    background-color: $button-no-danger-reverse-color;
+    color: $button-no-danger-color;
+    border-color: $button-no-danger-color;
+
+    &::before
+    {
+      content: '\02714';
+    }
+
+    &.-reverse
+    {
+      background-color: $button-no-danger-color;
+      color: $button-no-danger-reverse-color;
+    }
+  }
+
+  &.-danger
+  {
+    background-color: $button-danger-reverse-color;
+    color: $button-danger-color;
+    border-color: $button-danger-color;
+
+    &::before
+    {
+      content: '\026A0';
+    }
+
+    &.-reverse
+    {
+      background-color: $button-danger-color;
+      color: $button-danger-reverse-color;
+    }
+  }
+}

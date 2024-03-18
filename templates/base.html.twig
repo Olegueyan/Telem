@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=width-device, initial-scale=1.0, shrink-to-fit=no">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body class="LayoutContainer">
+        <header class="Header LayoutContainer_header">
+            <span class="Brand -sober -big Header_brand">Telem</span>
+            <form class="Search Header_banner" action="{{ path('app_product_search') }}" method="post">
+                <input class="Search_input" type="text" name="searchProduct" placeholder="Rechercher un produit">
+                <button class="Search_button" type="submit">&#x1F50E</button>
+            </form>
+        </header>
+        <aside class="MainMenu LayoutContainer_mainMenu">
+            Menu
+        </aside>
+        <main class="MainContent LayoutContainer_mainContent">
+
+            {% for label, messages in app.flashes %}
+                {% for message in messages %}
+                    <p class="Message -{{ label }}">{{ message }}</p>
+                {% endfor %}
+            {% endfor %}
+
+            {% block body %}{% endblock %}
+        </main>
+        <footer class="Footer LayoutContainer_footer">
+            ici un pied de page
+        </footer>
+    </body>
+</html>

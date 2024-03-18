@@ -1,0 +1,88 @@
+/* ################################ */
+/*              Common              */
+/* ################################ */
+
+/* ***** Couleurs du thème ***** */
+
+$color-base: #005d80;
+$color-secondary: #d5e3ec;
+
+/* ***** grid ***** */
+
+$grid-col1-width: 250px;
+$grid-col2-width: 1fr;
+
+/* ***** margin ***** */
+
+$margin-small: 2px;
+$margin-base: 5px;
+$margin-big: 10px;
+$margin-biggest: 15px;
+
+/* ***** padding ***** */
+
+$padding-small: 2px;
+$padding-base: 5px;
+$padding-big: 10px;
+$padding-biggest: 15px;
+
+/* ***** radius ***** */
+
+$radius-base: 5px;
+
+/* ################################ */
+/*               Block              */
+/* ################################ */
+
+/** ***** Button ***** */
+
+$button-default-color: #6b6b6b;
+$button-default-reverse-color: white;
+
+$button-link-color: $color-base;
+$button-link-reverse-color: white;
+
+$button-no-danger-color: green;
+$button-no-danger-reverse-color: white;
+
+$button-danger-color: red;
+$button-danger-reverse-color: white;
+
+/* ***** Brand ***** */
+
+$brand-bg-color: #ff8119;
+$brand-font-color: #fff;
+$brand-font-family: 'Oxygen', sans-serif;
+
+/* ***** Card ***** */
+
+$card-border-color: #d5e3ec;
+$card-border-color-hover: darken(#d5e3ec, 20%);
+
+/* ***** Footer ***** */
+
+$footer-bg-color: $color-base;
+
+/* ***** Header ***** */
+
+$header-bg-color: $color-base;
+$header-brand-width: $grid-col1-width - $padding-base;
+$header-padding: $padding-base;
+
+/* ***** MainContent ***** */
+
+$mainContent-bg-color: #f7fafb;
+
+/* ***** MainMenu ***** */
+
+$mainMenu-bg-color: $color-secondary;
+
+/* ***** Search ***** */
+
+$search-input-bg-color: white;
+$search-input-border: 4px solid $color-secondary;
+$search-input-border-search: 4px solid invert($color-base);
+$search-input-placeholder-font-color: #919191;
+
+$search-button-bg-color: $color-secondary;
+$search-button-bg-color-hover: darken($search-button-bg-color, 15%);

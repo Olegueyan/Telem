@@ -1,0 +1,37 @@
+{% if products is defined %}
+    {% set elementStart = '<a class="Card_info" href="'~path('app_product_show', {'id': product.id})~'">' %}
+    {% set elementEnd = '</a>' %}
+    {% set only = '' %}
+    {% set is_only = '' %}
+{% else %}
+    {% set elementStart = '<div class="Card_info">' %}
+    {% set elementEnd = '</div>' %}
+    {% set only = '-only' %}
+    {% set is_only = true %}
+{% endif %}
+
+<div class="Card {{ only }}">
+    <div class="Card_image">
+        <img class="Image" src="/images/{{ product.imageName }}" alt="{{ product.imageName }}">
+    </div>
+
+    {{ elementStart | raw }}
+        <p class="Card_title">
+            {{ product.name }}
+        </p>
+        <div class="Card_description">
+            {{ product.description }}
+        </div>
+        <p class="Card_price">
+            {{ product.price | price }}
+        </p>
+    {% if is_only %}
+        <div>
+            <a class="Button -link -reverse" href="{{ path('manage_product_edit', {'id': product.id}) }}">
+                Actions
+            </a>
+        </div>
+    {% endif %}
+    {{ elementEnd | raw }}
+
+</div>

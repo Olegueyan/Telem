@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    {% if product is defined %}
+        <h1>Formulaire de modification d'un produit</h1>
+    {% else %}
+        <h1>Formulaire de création d'un produit</h1>
+    {% endif %}
+
+    {{ form(formulaire_ajout, {'attr': {novalide: 'novalidate'}}) }}
+
+    {% if product is defined %}
+        <a class="Button -danger" href="{{ path('manage_product_delete_confirm', {'id':product.id}) }}">
+            Supprimer
+        </a>
+    {% endif %}
+{% endblock %}

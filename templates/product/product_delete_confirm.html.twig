@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <p class="Message -warning">Vous êtes sur le point de supprimer l'article ci-dessous.
+        Confirmez l'action si vous êtes sûr de ce que vous faites.</p>
+
+    <form action="{{ path('manage_product_delete', {'id':product.id}) }}" method="post">
+        <input style="display: none" type="button" name="token" value="{{ csrf_token('delete-product') }}">
+        <button type="submit" class="Button -danger -reverse">Supprimer définitivement</button>
+    </form>
+
+    {% include 'product/_product_card.html.twig' %}
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ product.name }} {% endblock %}
+
+{% block body %}
+
+    <h1 class="MainContent_title">Fiche Produit</h1>
+
+    {% include 'product/_product_card.html.twig' %}
+
+{% endblock %}
